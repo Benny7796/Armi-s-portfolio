@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    box-sizing: border-box;
+    color: #cccccc;
+    font-family: "Bruno Ace SC", sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.firstSection{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    background-color: #1a1a1a;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+    width: 90%;
+    height: 5%;
+    align-items: center;
+}
+
+.links {
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    z-index: 4;
+}
+.links a{
+    margin: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    pointer-events: all;
+}
+.links a:hover{
+    color: rgb(251, 2, 218);
+
+}
+.mainBody{
+    background-image: url(images/Model-Photoroom.png);
+    position: absolute;
+    height: 100vh;
+    width: 90%;
+    padding-bottom: 20px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 40%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.info {
+    max-width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+    top: 25%;
+    left: 10%;
+    gap: 1rem;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+}
+.info h3{
+    font-size: 1rem;
+}
+.info h5{
+    color:rgb(251, 2, 218);
+}
+.info button{
+    width: 120px;
+    height: 30px;
+    border: 3px solid #cccccc;
+    background-color: #1a1a1a;
+    border-radius: 16px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.info button:hover{
+    border: 2px solid #1a1a1a;
+    background-color: #cccccc;
+    color: #1a1a1a;
+    transition: 0.2s ease-in;
+}
+
+.align {
+  display: flex;
+  justify-content: space-between; /* icons left, toggle right */
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.icons{
+    width: 70%;
+    position: relative;
+    display: flex;
+    width: auto;
+    font-size: x-large;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start; /* center if you prefer: center */
+    flex: 1 1 auto;   /* grow to fill available space */
+    min-width: 0;   
+}
+
+.secondSection{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+    position: relative;
+}
+section{
+    transition: 1s;
+}
+.secondSection .animate{
+    transform: translateX(100%);
+}
+.secondSection .animate .show-animate{
+    transform: translateX(0);
+}
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+}
+.Card{
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    position: relative;
+    z-index: 4;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    transition:0.5s ease-in ;
+}
+.Card:hover {
+    transform: translateY(-10%);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 4;
+}
+.Card img {
+    max-width: 100%;
+    height: auto; 
+    max-height: 180px; 
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+.cardInfo{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.Card h5 {
+    color: rgb(251, 2, 218);
+    font-size: 0.8rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+    .main {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .Card {
+        width: 80%;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .info {
+        max-width: 90%;
+        left: 5%;
+        top: 20%;
+        gap: 0.8rem;
+        padding: 16px;
+    }
+    .info h1 {
+        font-size: 1.5rem;
+    }
+    .icons {
+        font-size: large;
+    }
+    .main {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .secondSection{
+        height: 180vh;
+    }
+     .Card {
+        height: auto;
+        padding: 15px;
+    }
+
+     .align {
+    flex-wrap: wrap;     
+    gap: 0.5rem;
+    }
+     .icons {
+    order: 1;
+    width: 100%;
+    justify-content: center; 
+     }
+     .theme-toggle {
+    order: 2;
+    margin-top: 6px;
+  }
+    
+}
+
+/* Toggle Button Style */
+
+  .theme-toggle {
+  flex: 0 0 auto;   
+  margin-left: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* no position, no z-index — stays in document flow */
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #888;
+  transition: .4s;
+  border-radius: 25px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #333;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Light mode styles */
+.light-mode {
+  background-color: #cccccc;
+  color: #1a1a1a;
+}
+
+.light-mode * {
+  color: #1a1a1a;
+}
+
+.light-mode .firstSection,
+.light-mode .secondSection {
+  background-color: #cccccc;
+}
+
+.light-mode .info button {
+  border: 3px solid #1a1a1a;
+  background-color: #cccccc;
+  color: #1a1a1a;
+}
+
+.light-mode .info button:hover {
+  border: 2px solid #cccccc;
+  background-color: #1a1a1a;
+  color: #cccccc;
+}
