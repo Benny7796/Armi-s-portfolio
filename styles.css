@@ -34,6 +34,7 @@ body{
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    width: auto;
     z-index: 4;
 }
 .links a{
@@ -220,6 +221,12 @@ section{
         top: 20%;
         gap: 0.8rem;
         padding: 16px;
+    }
+    .header{
+        width: 100vw;
+        justify-content: space-between;
+        align-items: baseline;
+        height: 8%;
     }
     .info h1 {
         font-size: 1.5rem;
