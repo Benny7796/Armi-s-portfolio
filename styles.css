@@ -232,7 +232,7 @@ section{
         gap: 1.5rem;
     }
     .secondSection{
-        height: 180vh;
+        height: auto;
     }
      .Card {
         height: auto;
